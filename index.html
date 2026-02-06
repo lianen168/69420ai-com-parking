@@ -3,736 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>69420ai.com | Elon Musk's AI Domain</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- SEO: Title Tag -->
+    <title>69420ai.com | The Unofficial AI for a New Generation</title>
+    
+    <!-- SEO: Meta Description -->
+    <meta name="description" content="Explore 69420ai.com, the premium domain for AI ventures that are creative, irreverent, and culturally fluent. The perfect brand for meme generation, creative tools, and next-gen entertainment.">
+    
+    <!-- SEO: Keywords -->
+    <meta name="keywords" content="69420, AI, meme, Elon Musk, funny AI, creative AI, domain, 69420ai.com, generative AI, entertainment">
+
+    <!-- Social Media/Open Graph Tags -->
+    <meta property="og:title" content="69420ai.com | The Fun Side of AI">
+    <meta property="og:description" content="A premium domain asset for AI that doesn't take itself too seriously.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://69420ai.com">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- SEO: JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "69420ai.com | The Unofficial AI for a New Generation",
+      "description": "A landing page for the premium domain asset 69420ai.com, exploring its value in the context of meme culture and creative artificial intelligence.",
+      "url": "https://69420ai.com",
+      "mainEntity": {
+        "@type": "Product",
+        "name": "The domain name 69420ai.com",
+        "description": "A premium, culturally-relevant domain for a venture in the creative or entertainment AI space.",
+        "sku": "69420ai.com",
+        "offers": {
+          "@type": "Offer",
+          "price": "690.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.spaceship.com/s/buy/69420ai.com/glWjZlH9gnVcas7M"
+        }
+      }
+    }
+    </script>
+    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         :root {
-            --neon-blue: #00d9ff;
-            --neon-green: #00ff9d;
-            --neon-purple: #b967ff;
-            --cyber-dark: #0a0a14;
-            --cyber-gray: #1a1a2e;
-            --cyber-light: #2d2d44;
-            --electric-yellow: #ffeb3b;
+            --bg-dark: #0D0221;
+            --bg-darker: #05010a;
+            --text-primary: #f0e8ff;
+            --text-secondary: #a094b7;
+            --accent-green: #00ffa3;
+            --accent-purple: #c300ff;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --card-bg: rgba(255, 255, 255, 0.04);
         }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
-            font-family: 'Exo 2', sans-serif;
-            background-color: var(--cyber-dark);
-            color: #fff;
-            min-height: 100vh;
+            background-color: var(--bg-darker);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
             overflow-x: hidden;
-            position: relative;
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(0, 217, 255, 0.05) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(185, 103, 255, 0.05) 0%, transparent 20%),
-                radial-gradient(circle at 50% 50%, rgba(0, 255, 157, 0.03) 0%, transparent 30%);
+            min-height: 100vh;
         }
         
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            position: relative;
-            z-index: 2;
+        #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
+
+        @keyframes text-glow {
+          0%, 100% { text-shadow: 0 0 4px var(--accent-green), 0 0 8px var(--accent-green), 0 0 16px var(--accent-purple); }
+          50% { text-shadow: 0 0 8px var(--accent-green), 0 0 16px var(--accent-green), 0 0 32px var(--accent-purple); }
         }
-        
-        /* Cyber Grid Background */
-        .cyber-grid {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(0, 217, 255, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 217, 255, 0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            z-index: 1;
-            pointer-events: none;
-            opacity: 0.3;
-        }
-        
-        header {
-            text-align: center;
-            padding: 60px 0 40px;
-            position: relative;
-        }
-        
-        .glitch-container {
-            position: relative;
-            margin-bottom: 30px;
-        }
-        
-        .domain-name {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 5.5rem;
-            font-weight: 900;
-            color: var(--neon-blue);
-            text-shadow: 
-                0 0 10px var(--neon-blue),
-                0 0 20px var(--neon-blue),
-                0 0 40px rgba(0, 217, 255, 0.7);
-            letter-spacing: 3px;
-            margin-bottom: 15px;
-            position: relative;
-            display: inline-block;
-            animation: pulse 2s infinite alternate;
-        }
-        
-        @keyframes pulse {
-            0% { text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue), 0 0 40px rgba(0, 217, 255, 0.7); }
-            100% { text-shadow: 0 0 15px var(--neon-blue), 0 0 30px var(--neon-blue), 0 0 60px rgba(0, 217, 255, 0.9); }
-        }
-        
-        .domain-name::before, .domain-name::after {
-            content: '69420ai.com';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .domain-name::before {
-            animation: glitch-1 2.5s infinite;
-            color: var(--neon-green);
-            z-index: -1;
-        }
-        
-        .domain-name::after {
-            animation: glitch-2 2s infinite;
-            color: var(--neon-purple);
-            z-index: -2;
-        }
-        
-        @keyframes glitch-1 {
-            0%, 100% { transform: translate(0); opacity: 0.8; }
-            10% { transform: translate(-2px, 2px); opacity: 0.6; }
-            20% { transform: translate(2px, -1px); opacity: 0.4; }
-            30% { transform: translate(-1px, 1px); opacity: 0.8; }
-            40% { transform: translate(1px, -2px); opacity: 0.6; }
-            50% { transform: translate(-1px, 1px); opacity: 0.4; }
-            60% { transform: translate(2px, 2px); opacity: 0.8; }
-            70% { transform: translate(-2px, -1px); opacity: 0.6; }
-            80% { transform: translate(1px, -2px); opacity: 0.4; }
-            90% { transform: translate(-2px, 1px); opacity: 0.8; }
-        }
-        
-        @keyframes glitch-2 {
-            0%, 100% { transform: translate(0); opacity: 0.5; }
-            15% { transform: translate(2px, -2px); opacity: 0.3; }
-            25% { transform: translate(-1px, 1px); opacity: 0.5; }
-            35% { transform: translate(1px, 2px); opacity: 0.3; }
-            45% { transform: translate(-2px, -1px); opacity: 0.5; }
-            55% { transform: translate(1px, -2px); opacity: 0.3; }
-            65% { transform: translate(-1px, 1px); opacity: 0.5; }
-            75% { transform: translate(2px, 2px); opacity: 0.3; }
-            85% { transform: translate(-2px, -1px); opacity: 0.5; }
-            95% { transform: translate(1px, -2px); opacity: 0.3; }
-        }
-        
-        .tagline {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 1.8rem;
-            color: var(--neon-green);
-            margin-bottom: 20px;
-            letter-spacing: 1px;
-        }
-        
-        .domain-breakdown {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin: 50px 0;
-        }
-        
-        .domain-part {
-            padding: 20px 30px;
-            border-radius: 15px;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 6rem 2rem 4rem; position: relative; z-index: 2; }
+        header { text-align: center; margin-bottom: 6rem; }
+        .logo {
+            font-family: 'Space Mono', monospace;
             font-weight: 700;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            min-width: 200px;
+            font-size: clamp(3rem, 10vw, 7rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.05em;
         }
-        
-        .meme-number {
-            background: rgba(0, 255, 157, 0.1);
-            border: 2px solid var(--neon-green);
-            color: var(--neon-green);
-            box-shadow: 0 0 15px rgba(0, 255, 157, 0.3);
-        }
-        
-        .ai-part {
-            background: rgba(0, 217, 255, 0.1);
-            border: 2px solid var(--neon-blue);
-            color: var(--neon-blue);
-            box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
-        }
-        
-        .plus-sign {
-            font-size: 3rem;
-            color: var(--electric-yellow);
-            font-weight: 900;
-        }
-        
-        .meme-number:hover, .ai-part:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0, 217, 255, 0.5);
-        }
-        
-        .meaning-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-            margin: 60px 0;
-        }
-        
-        .meaning-box {
-            background: rgba(26, 26, 46, 0.8);
-            border-radius: 20px;
-            padding: 40px 30px;
-            width: 100%;
-            max-width: 500px;
-            border: 1px solid rgba(0, 217, 255, 0.3);
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s ease;
-            backdrop-filter: blur(10px);
-        }
-        
-        .meaning-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--neon-blue), var(--neon-green), var(--neon-purple));
-        }
-        
-        .meaning-box:hover {
-            transform: translateY(-15px);
-            border-color: var(--neon-blue);
-            box-shadow: 0 15px 35px rgba(0, 217, 255, 0.2);
-        }
-        
-        .box-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
-            color: var(--neon-blue);
-            margin-bottom: 25px;
-            text-align: center;
-            font-weight: 700;
-        }
-        
-        .box-content {
-            font-size: 1.3rem;
-            line-height: 1.8;
-            color: #ccc;
-            text-align: center;
-        }
-        
-        .highlight {
-            color: var(--neon-green);
-            font-weight: 700;
-            font-size: 1.4rem;
-        }
-        
-        .musk-quote {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 1.5rem;
-            color: var(--electric-yellow);
-            text-align: center;
-            margin: 50px auto;
-            padding: 30px;
-            border-left: 5px solid var(--neon-green);
-            border-right: 5px solid var(--neon-green);
-            max-width: 800px;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .musk-quote::before {
-            content: '"';
-            position: absolute;
-            top: -30px;
-            left: 20px;
-            font-size: 8rem;
-            color: rgba(0, 217, 255, 0.1);
-            font-family: serif;
-        }
-        
-        .price-section {
-            background: rgba(26, 26, 46, 0.9);
-            border-radius: 25px;
-            padding: 50px 40px;
-            margin: 60px auto;
-            border: 2px solid var(--neon-purple);
-            text-align: center;
-            max-width: 700px;
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 40px rgba(185, 103, 255, 0.2);
-        }
-        
-        .price-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.5rem;
-            color: var(--electric-yellow);
-            margin-bottom: 30px;
-        }
-        
-        .price {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 4.5rem;
-            color: var(--neon-green);
-            font-weight: 900;
-            margin: 20px 0;
-            text-shadow: 0 0 20px var(--neon-green);
-            position: relative;
+        /* Dynamic font styles */
+        .dynamic-main, .dynamic-tld {
             display: inline-block;
+            animation: text-glow 3s ease-in-out infinite;
         }
+        .dynamic-main {
+            background: linear-gradient(135deg, #f0e8ff, #d8ceff);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .dynamic-tld {
+            background: linear-gradient(135deg, var(--accent-green), var(--accent-purple));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+            animation-direction: reverse;
+        }
+
+        .tagline { font-size: clamp(1.1rem, 2.5vw, 1.5rem); color: var(--text-secondary); font-weight: 300; margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto; }
         
-        .price::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
-        }
+        .thesis { max-width: 800px; margin: 0 auto 5rem; text-align: center; font-size: 1.25rem; color: var(--text-secondary); line-height: 1.8; font-style: italic; }
+        .thesis-highlight { color: var(--accent-green); font-weight: 600; font-style: normal; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; margin-bottom: 6rem; }
+        .card { background: var(--card-bg); border: 1px solid var(--border-color); padding: 2.5rem; border-radius: 12px; transition: all 0.3s ease; backdrop-filter: blur(5px); }
+        .card:hover { transform: translateY(-8px); border-color: var(--accent-green); box-shadow: 0 10px 30px rgba(0, 255, 163, 0.1); }
+        .card-title { font-family: 'Space Mono', monospace; font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+        .card-desc { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; }
         
-        .installment {
-            font-size: 1.8rem;
-            color: var(--neon-blue);
-            margin-top: 20px;
-            background: rgba(0, 217, 255, 0.1);
-            padding: 15px 25px;
-            border-radius: 12px;
-            display: inline-block;
-        }
+        .cta { max-width: 700px; margin: 0 auto 5rem; text-align: center; padding: 4rem; background: linear-gradient(145deg, var(--bg-darker), #10022b); border: 1px solid var(--border-color); border-radius: 16px; position: relative; overflow: hidden; }
+        .cta-content { position: relative; z-index: 1; }
+        .price { font-family: 'Space Mono', monospace; font-size: 3.5rem; font-weight: 700; margin: 1.5rem 0 0.5rem; color: var(--text-primary); }
+        .price-sub { color: var(--text-secondary); font-size: 1rem; margin-bottom: 2.5rem; }
+        .btn-container { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .btn { display: inline-block; color: #000; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1rem; padding: 1rem 2.5rem; text-decoration: none; border-radius: 8px; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s ease; border: none; cursor: pointer; }
+        .btn.primary { background: linear-gradient(135deg, var(--accent-green), var(--accent-purple)); }
+        .btn.primary:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(0, 255, 163, 0.3); }
+        .btn.secondary { background: transparent; border: 2px solid var(--accent-green); color: var(--accent-green); }
+        .btn.secondary:hover { background: rgba(0, 255, 163, 0.1); transform: translateY(-2px); }
         
-        .contact-section {
-            text-align: center;
-            margin: 70px 0 50px;
-            padding: 50px;
-            background: rgba(10, 10, 20, 0.8);
-            border-radius: 25px;
-            border: 2px solid var(--neon-blue);
-            box-shadow: 0 0 30px rgba(0, 217, 255, 0.2);
-            backdrop-filter: blur(10px);
-        }
-        
-        .contact-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
-            color: var(--neon-blue);
-            margin-bottom: 30px;
-        }
-        
-        .email {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 1.8rem;
-            color: white;
-            background: linear-gradient(90deg, var(--cyber-gray), var(--cyber-light));
-            padding: 20px 40px;
-            border-radius: 50px;
-            display: inline-block;
-            margin-top: 25px;
-            border: 2px solid var(--neon-green);
-            transition: all 0.3s ease;
-            text-decoration: none;
-            box-shadow: 0 5px 20px rgba(0, 255, 157, 0.3);
-            letter-spacing: 1px;
-        }
-        
-        .email:hover {
-            background: linear-gradient(90deg, var(--neon-green), var(--neon-blue));
-            color: var(--cyber-dark);
-            transform: translateY(-8px) scale(1.05);
-            box-shadow: 0 15px 35px rgba(0, 255, 157, 0.5);
-            border-color: var(--electric-yellow);
-        }
-        
-        .floating-tech {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-            overflow: hidden;
-        }
-        
-        .tech-element {
-            position: absolute;
-            font-size: 24px;
-            animation: techFloat 30s infinite linear;
-            opacity: 0.1;
-            font-family: 'Share Tech Mono', monospace;
-        }
-        
-        @keyframes techFloat {
-            0% {
-                transform: translateY(100vh) rotate(0deg) scale(0.5);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.15;
-            }
-            90% {
-                opacity: 0.15;
-            }
-            100% {
-                transform: translateY(-100px) rotate(360deg) scale(1.5);
-                opacity: 0;
-            }
-        }
-        
-        .stats-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin: 60px 0;
-        }
-        
-        .stat-box {
-            background: rgba(26, 26, 46, 0.7);
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            border: 1px solid rgba(0, 217, 255, 0.2);
-            transition: all 0.3s ease;
-        }
-        
-        .stat-box:hover {
-            border-color: var(--neon-green);
-            transform: translateY(-10px);
-        }
-        
-        .stat-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.5rem;
-            color: var(--neon-blue);
-            margin-bottom: 15px;
-        }
-        
-        .stat-value {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 2.5rem;
-            color: var(--neon-green);
-            font-weight: 700;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 50px 0 30px;
-            color: #888;
-            font-size: 1rem;
-            margin-top: 40px;
-            border-top: 1px solid rgba(0, 217, 255, 0.2);
-            font-family: 'Share Tech Mono', monospace;
-        }
-        
-        .musk-signature {
-            font-family: 'Orbitron', sans-serif;
-            color: var(--neon-green);
-            font-size: 1.2rem;
-            margin-top: 20px;
-            letter-spacing: 2px;
-        }
+        footer { text-align: center; padding: 2rem; color: #555; font-size: 0.8rem; border-top: 1px solid rgba(255, 255, 255, 0.05); }
         
         @media (max-width: 768px) {
-            .domain-name {
-                font-size: 3.5rem;
-            }
-            
-            .tagline {
-                font-size: 1.4rem;
-            }
-            
-            .domain-part {
-                min-width: 150px;
-                font-size: 1.8rem;
-                padding: 15px 20px;
-            }
-            
-            .price {
-                font-size: 3.5rem;
-            }
-            
-            .email {
-                font-size: 1.3rem;
-                padding: 15px 25px;
-            }
-            
-            .meaning-box {
-                padding: 30px 20px;
-            }
-        }
-        
-        /* Terminal Effect */
-        .terminal-line {
-            font-family: 'Share Tech Mono', monospace;
-            color: var(--neon-green);
-            font-size: 1.2rem;
-            margin: 5px 0;
-            opacity: 0;
-            animation: typeIn 0.5s forwards;
-            animation-delay: calc(var(--i) * 0.3s);
-        }
-        
-        @keyframes typeIn {
-            to { opacity: 1; }
-        }
-        
-        .cursor {
-            display: inline-block;
-            width: 10px;
-            height: 20px;
-            background-color: var(--neon-green);
-            margin-left: 5px;
-            animation: blink 1s infinite;
-            vertical-align: middle;
-        }
-        
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
+            .container { padding: 4rem 1.5rem 3rem; }
+            .grid { grid-template-columns: 1fr; }
+            .cta { padding: 3rem 1.5rem; }
+            .price { font-size: 2.8rem; }
+            .btn { width: 100%; padding: 1.25rem 2rem; }
         }
     </style>
 </head>
 <body>
-    <div class="cyber-grid"></div>
-    <div class="floating-tech" id="floating-tech"></div>
+
+    <div id="particles-js"></div>
     
-    <div class="container">
+    <main class="container">
+
         <header>
-            <div class="glitch-container">
-                <h1 class="domain-name">69420ai.com</h1>
-            </div>
-            <h2 class="tagline">Elon Musk's Digital Meme Meets Artificial Intelligence</h2>
-            
-            <div class="terminal-container" style="max-width: 800px; margin: 40px auto; background: rgba(0,0,0,0.5); padding: 25px; border-radius: 10px; border: 1px solid rgba(0, 217, 255, 0.3);">
-                <div class="terminal-line" style="--i:0">> Initializing 69420AI protocol...</div>
-                <div class="terminal-line" style="--i:1">> Loading Elon Musk meme database...</div>
-                <div class="terminal-line" style="--i:2">> Syncing with SpaceX neural network...</div>
-                <div class="terminal-line" style="--i:3">> Establishing connection to Tesla AI...</div>
-                <div class="terminal-line" style="--i:4">> 69420AI.com ready for acquisition<span class="cursor"></span></div>
-            </div>
+            <h1 class="logo">
+                <span class="dynamic-main">69420ai</span><span class="dynamic-tld">.com</span>
+            </h1>
+            <p class="tagline">AI That Doesn't Take Itself Too Seriously</p>
         </header>
         
-        <div class="domain-breakdown">
-            <div class="domain-part meme-number">
-                <div>69420</div>
-                <div style="font-size: 1.2rem; margin-top: 10px; color: #aaa;">Elon's Number</div>
-            </div>
-            <div class="plus-sign">+</div>
-            <div class="domain-part ai-part">
-                <div>AI</div>
-                <div style="font-size: 1.2rem; margin-top: 10px; color: #aaa;">Artificial Intelligence</div>
-            </div>
-        </div>
-        
-        <div class="musk-quote">
-            "When something is important enough, you do it even if the odds are not in your favor."<br>
-            <div style="font-size: 1.2rem; margin-top: 15px; color: var(--neon-blue);">- Elon Musk</div>
-        </div>
-        
-        <div class="meaning-container">
-            <div class="meaning-box">
-                <h3 class="box-title">THE 69420 MEME</h3>
-                <div class="box-content">
-                    <span class="highlight">69420</span> is Elon Musk's iconic digital signature,<br><br>
-                    A combination of internet culture's favorite numbers:<br>
-                    <span class="highlight">69</span> + <span class="highlight">420</span><br><br>
-                    Used by Musk in tweets, presentations, and as a playful signature<br>
-                    representing his unique blend of tech genius and internet humor.
-                </div>
-            </div>
-            
-            <div class="meaning-box">
-                <h3 class="box-title">AI REVOLUTION</h3>
-                <div class="box-content">
-                    <span class="highlight">AI</span> represents the future that Elon Musk is actively building:<br><br>
-                    • Neuralink brain-computer interfaces<br>
-                    • Tesla Autopilot and Optimus robots<br>
-                    • xAI artificial intelligence company<br>
-                    • OpenAI founding vision<br><br>
-                    The perfect domain for Musk-inspired AI projects.
-                </div>
-            </div>
-        </div>
-        
-        <div class="stats-container">
-            <div class="stat-box">
-                <div class="stat-title">CHARACTERS</div>
-                <div class="stat-value">7</div>
-                <div style="color: #aaa; margin-top: 10px;">Short & memorable</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-title">MEME VALUE</div>
-                <div class="stat-value">MAX</div>
-                <div style="color: #aaa; margin-top: 10px;">Elon's signature numbers</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-title">TECH RELEVANCE</div>
-                <div class="stat-value">AI</div>
-                <div style="color: #aaa; margin-top: 10px;">Artificial Intelligence focus</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-title">GLOBAL RECOGNITION</div>
-                <div class="stat-value">100%</div>
-                <div style="color: #aaa; margin-top: 10px;">Musk followers worldwide</div>
-            </div>
-        </div>
-        
-        <div class="price-section">
-            <h3 class="price-title">DOMAIN PRICE</h3>
-            <div class="price">$690 USD</div>
-            <div class="installment">3 payments of $230 each</div>
-            <p style="margin-top: 30px; color: #ccc; font-size: 1.2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                A tribute to the 69420 meme with a price that's as memorable as the domain itself.
-                Perfect for AI startups, tech projects, or Musk-inspired ventures.
-            </p>
-        </div>
-        
-        <div class="contact-section">
-            <h3 class="contact-title">ACQUIRE THIS FUTURISTIC DOMAIN</h3>
-            <p style="font-size: 1.4rem; color: #ccc; margin-bottom: 30px; line-height: 1.6; max-width: 800px; margin-left: auto; margin-right: auto;">
-                69420ai.com is the perfect domain for AI projects, tech startups, or anyone building 
-                the future with a sense of humor and Elon Musk's visionary spirit.
-            </p>
-            <a href="mailto:joshua369x@gmail.com" class="email">
-                <i class="fas fa-rocket"></i> CONTACT: joshua369x@gmail.com <i class="fas fa-brain"></i>
-            </a>
-            <p style="margin-top: 35px; color: var(--neon-blue); font-size: 1.2rem;">
-                Send your acquisition proposal to the email above. SpaceX not included.
-            </p>
-        </div>
-        
-        <footer>
-            <p>69420ai.com | Elon Musk-Inspired AI Domain</p>
-            <p>This domain combines internet culture with artificial intelligence in true Musk fashion.</p>
-            <div class="musk-signature">TO THE MOON 🚀</div>
-        </footer>
-    </div>
+        <section class="thesis">
+            <p>"While corporate AI aims for perfect order, <span class="thesis-highlight">69420ai.com</span> is the home for generative chaos, memetic brilliance, and the unapologetically fun side of the artificial intelligence revolution."</p>
+        </section>
 
+        <section class="grid">
+            <div class="card">
+                <h2 class="card-title">Generative Memetics</h2>
+                <p class="card-desc">The definitive platform for AI-powered meme creation. Train models on internet culture to generate the next viral sensation on demand.</p>
+            </div>
+            <div class="card">
+                <h2 class="card-title">Unfiltered Chatbots</h2>
+                <p class="card-desc">AI companions with actual personalities. Move beyond sanitized corporate responses and create chatbots that are genuinely funny, edgy, and interesting.</p>
+            </div>
+            <div class="card">
+                <h2 class="card-title">Creative Gaming AI</h2>
+                <p class="card-desc">For AI that enhances gameplay with unexpected, chaotic, and hilarious outcomes. The home of non-player characters (NPCs) you'll actually remember.</p>
+            </div>
+            <div class="card">
+                <h2 class="card-title">AI Comedy & Content</h2>
+                <p class="card-desc">A platform for generating stand-up routines, satirical articles, and funny video scripts. The future of comedy, co-written by an algorithm with a sense of humor.</p>
+            </div>
+            <div class="card">
+                <h2 class="card-title">Next-Gen Social Avatars</h2>
+                <p class="card-desc">Create dynamic, AI-driven digital identities and avatars that evolve based on your online behavior, memes, and interactions.</p>
+            </div>
+            <div class="card">
+                <h2 class="card-title">The "Stupid Ideas" Incubator</h2>
+                <p class="card-desc">An AI-powered brainstorming tool that specializes in generating hilariously bad (or secretly brilliant) startup ideas. The perfect brand for creative chaos.</p>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="cta-content">
+                <div style="font-size: 0.8rem; color: var(--accent-green); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">Premium Domain Asset</div>
+                <div class="price">$690 USD</div>
+                <div class="price-sub">3-Month Financing Available</div>
+                <div class="btn-container">
+                    <!-- Updated purchase link opening in a new tab -->
+                    <a href="https://www.spaceship.com/s/buy/69420ai.com/glWjZlH9gnVcas7M" target="_blank" rel="noopener noreferrer" class="btn primary">
+                        Acquire Now
+                    </a>
+                    <!-- Contact button with JS function -->
+                    <button class="btn secondary" onclick="copyEmail()">
+                        Contact
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 69420ai.com - Nice.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        // Create floating tech elements
-        function createTechElements() {
-            const container = document.getElementById('floating-tech');
-            const elementCount = 40;
-            const elements = ['{ }', '</>', 'AI', '69', '420', '0x', '01', '10', 'π', 'Σ', 'Ω', '∫', '∂', '∇', '∞', '≠', '≈', '≡', '≤', '≥'];
-            
-            for (let i = 0; i < elementCount; i++) {
-                const element = document.createElement('div');
-                element.classList.add('tech-element');
-                element.innerHTML = elements[Math.floor(Math.random() * elements.length)];
-                element.style.left = `${Math.random() * 100}%`;
-                element.style.animationDuration = `${25 + Math.random() * 40}s`;
-                element.style.animationDelay = `${Math.random() * 20}s`;
-                
-                // Random color
-                const colors = ['#00d9ff', '#00ff9d', '#b967ff', '#ffeb3b'];
-                element.style.color = colors[Math.floor(Math.random() * colors.length)];
-                
-                // Random size
-                const size = 18 + Math.random() * 30;
-                element.style.fontSize = `${size}px`;
-                
-                container.appendChild(element);
-            }
-        }
-        
-        // Terminal typing effect
-        function initTerminal() {
-            const cursor = document.querySelector('.cursor');
-            let isVisible = true;
-            setInterval(() => {
-                isVisible = !isVisible;
-                cursor.style.opacity = isVisible ? '1' : '0';
-            }, 500);
-        }
-        
-        // Domain part hover effects
-        function initDomainHover() {
-            const domainParts = document.querySelectorAll('.domain-part');
-            
-            domainParts.forEach(part => {
-                part.addEventListener('mouseenter', function() {
-                    const color = this.classList.contains('meme-number') ? '#00ff9d' : '#00d9ff';
-                    this.style.boxShadow = `0 0 30px ${color}`;
-                });
-                
-                part.addEventListener('mouseleave', function() {
-                    this.style.boxShadow = '0 0 15px rgba(0, 217, 255, 0.3)';
-                });
-            });
-            
-            // Add click effect to price section
-            const priceSection = document.querySelector('.price-section');
-            priceSection.addEventListener('click', function() {
-                this.style.transform = 'scale(0.98)';
-                setTimeout(() => {
-                    this.style.transform = 'scale(1)';
-                }, 200);
-            });
-            
-            // Email hover effect
-            const emailLink = document.querySelector('.email');
-            emailLink.addEventListener('mouseenter', function() {
-                this.innerHTML = '<i class="fas fa-paper-plane"></i> joshua369x@gmail.com <i class="fas fa-paper-plane"></i>';
-            });
-            
-            emailLink.addEventListener('mouseleave', function() {
-                this.innerHTML = '<i class="fas fa-rocket"></i> CONTACT: joshua369x@gmail.com <i class="fas fa-brain"></i>';
-            });
-        }
-        
-        // Initialize everything when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            createTechElements();
-            initTerminal();
-            initDomainHover();
+            const isMobile = window.innerWidth < 768;
             
-            // Add glitch effect to domain name periodically
-            const domainName = document.querySelector('.domain-name');
-            setInterval(() => {
-                domainName.classList.remove('animate__animated', 'animate__headShake');
-                setTimeout(() => {
-                    domainName.classList.add('animate__animated', 'animate__headShake');
-                }, 10);
-            }, 8000);
-            
-            // Add scrolling parallax to cyber grid
-            const cyberGrid = document.querySelector('.cyber-grid');
-            window.addEventListener('scroll', function() {
-                const scrolled = window.pageYOffset;
-                cyberGrid.style.transform = `translateY(${scrolled * 0.2}px)`;
+            particlesJS('particles-js', {
+                particles: {
+                    number: { value: isMobile ? 50 : 100, density: { enable: true, value_area: 800 } },
+                    color: { value: ['#00ffa3', '#c300ff'] },
+                    shape: { type: 'circle' },
+                    opacity: { value: 0.5, random: true },
+                    size: { value: 2.5, random: true },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: 'random',
+                        opacity: 0.15,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: isMobile ? 1.5 : 3,
+                        direction: 'none',
+                        random: true,
+                        straight: false,
+                        out_mode: 'out',
+                        bounce: false
+                    }
+                },
+                interactivity: {
+                    detect_on: 'canvas',
+                    events: {
+                        onhover: { enable: !isMobile, mode: 'bubble' },
+                        onclick: { enable: true, mode: 'push' },
+                        resize: true
+                    },
+                    modes: {
+                        bubble: { distance: 200, size: 4, duration: 2, opacity: 0.8 },
+                        push: { particles_nb: 4 }
+                    }
+                },
+                retina_detect: true
             });
         });
+
+        function copyEmail() {
+            navigator.clipboard.writeText('joshua369x@gmail.com').then(function() {
+                const contactBtn = document.querySelector('.btn.secondary');
+                const originalText = contactBtn.textContent;
+                contactBtn.textContent = 'Email Copied!';
+                contactBtn.style.color = 'var(--accent-purple)';
+                contactBtn.style.borderColor = 'var(--accent-purple)';
+                
+                setTimeout(function() {
+                    contactBtn.textContent = originalText;
+                    contactBtn.style.color = '';
+                    contactBtn.style.borderColor = '';
+                }, 2500);
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
     </script>
+
 </body>
 </html>
